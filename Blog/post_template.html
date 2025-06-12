@@ -41,5 +41,20 @@
   <footer>
     <p>&copy; 2025 My Blog</p>
   </footer>
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const htmlTag = document.documentElement;
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlTag.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      htmlTag.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) htmlTag.setAttribute('data-theme', savedTheme);
+</script>
 </body>
 </html>
