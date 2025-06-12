@@ -8,7 +8,7 @@ tags: posts
 <article>
 No more!
   
-![Banner](../images/12600by3uCongBpx.png)
+![Banner](../images/l2G0O8y3uConqOgx.png)
 
 Thanks for reading!
 </article>
