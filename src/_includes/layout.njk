@@ -16,10 +16,15 @@
   </header>
 
   <main style="padding: 2rem; max-width: 800px; margin: auto;">
-    {{ content | safe }}
-<section style="margin-top: 3rem;">
-  <h3>Comments</h3>
-  <script src="https://giscus.app/client.js"
+    <article>
+      {{ content | safe }}
+    </article>
+
+    <hr style="margin: 2rem 0;" />
+
+    <section style="width: 100%; display: block;">
+      <h3>Comments</h3>
+      <script src="https://giscus.app/client.js"
         data-repo="MartinApostolov/Blog"
         data-repo-id="R_kgDOO6imGQ"
         data-category="General"
@@ -33,9 +38,8 @@
         data-lang="en"
         crossorigin="anonymous"
         async>
-</script>
-</section>
-
+      </script>
+    </section>
   </main>
 
   <footer>
