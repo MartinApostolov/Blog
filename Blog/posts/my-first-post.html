@@ -1,27 +1,29 @@
-<!-- /posts/my-first-post.html -->
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Blog Post</title>
-    <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Title</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <h1><a href="../index.html">My Blog</a></h1>
-    </header>
+  <header>
+    <nav>
+  <a href="../index.html">Home</a>
+  <button id="theme-toggle">Toggle Theme</button>
+</nav>
+  </header>
 
-    <main style="padding: 2rem; max-width: 800px; margin: auto;">
-        <article>
-            <h2>My First Blog Post</h2>
-            <p><em>Published on June 12, 2025</em></p>
-            <p>Welcome to my blog! This is the first post. I'll share updates, thoughts, and stories here.</p>
-        </article>
+  <main style="padding: 2rem; max-width: 800px; margin: auto;">
+    <article>
+      <h2>My First Blog Post</h2>
+      <p><em>Published on June 12, 2025</em></p>
+      <p>Welcome to my blog! This is the first post. I'll share updates, thoughts, and stories here.</p>
+    </article>
 
-        <section style="margin-top: 3rem;">
-            <h3>Comments</h3>
-            <script src="https://giscus.app/client.js"
+    <section style="margin-top: 3rem;">
+      <h3>Comments</h3>
+      <script src="https://giscus.app/client.js"
         data-repo="MartinApostolov/Blog"
         data-repo-id="R_kgDOO6imGQ"
         data-category="General"
@@ -36,11 +38,26 @@
         crossorigin="anonymous"
         async>
 </script>
-        </section>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 My Blog</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const htmlTag = document.documentElement;
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlTag.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      htmlTag.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) htmlTag.setAttribute('data-theme', savedTheme);
+</script>
 </body>
 </html>
