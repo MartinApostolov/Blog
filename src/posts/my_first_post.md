@@ -1,7 +1,7 @@
 ---
 title: "My First Blog Post"
 date: 2025-06-12
-layout: layout.njk
+layout: post.njk
 tags: posts
 ---
 
