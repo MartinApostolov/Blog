@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("scripts.js");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/images");
+    eleventyConfig.addPassthroughCopy("src/videos");
 
     return {
         dir: {
