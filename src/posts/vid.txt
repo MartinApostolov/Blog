@@ -1,9 +1,15 @@
 ---
-title: "My First Blog Post"
+title: "Vid"
 date: 2025-06-12
 layout: layout.njk
 ---
 
-Welcome to my blog! This is the first post. I'll share updates, thoughts, and stories here.
+Hi!
+
+<video width="640" height="360" controls>
+  <source src="/videos/13731599_2160_3840_30fps.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 Thanks for reading!
