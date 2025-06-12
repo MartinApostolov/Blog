@@ -2,6 +2,7 @@
 title: "Vid"
 date: 2025-06-12
 layout: layout.njk
+tags: posts
 ---
 
 Hi!
