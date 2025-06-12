@@ -5,6 +5,8 @@ layout: layout.njk
 tags: posts
 ---
 
+<article>
 Welcome to my blog! This is the first post. I'll share updates, thoughts, and stories here.
 
 Thanks for reading!
+</article>
