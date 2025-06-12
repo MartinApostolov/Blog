@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <a href="simple_blog_with_cms.html">Home</a>
+      <button id="theme-toggle">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main id="posts">
+    <!-- Blog posts will be injected here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Theme toggle logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlTag = document.documentElement;
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlTag.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      htmlTag.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) htmlTag.setAttribute('data-theme', savedTheme);
+  </script>
+</body>
+</html>

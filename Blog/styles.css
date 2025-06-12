@@ -1,0 +1,82 @@
+/* Base styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0055ff;
+  --card-bg: #f7f7f7;
+  --footer-bg: #eeeeee;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #3399ff;
+  --card-bg: #1f1f1f;
+  --footer-bg: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header, footer {
+  padding: 1rem 2rem;
+  background: var(--footer-bg);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a, #theme-toggle {
+  margin: 0 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-preview {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.post-preview:hover {
+  transform: translateY(-5px);
+}
+
+.post-preview h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+.post-preview p {
+  margin-bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
