@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <div id="cms"></div> <!-- ✅ Required mount point -->
+    <script src="https://unpkg.com/netlify-cms-app@^2.10.0/dist/netlify-cms-app.js"></script>
+    <script>
+      NetlifyCmsApp.init();
+    </script>
   </body>
 </html>
