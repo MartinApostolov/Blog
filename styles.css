@@ -97,3 +97,13 @@ section {
   display: flex;
   justify-content: center;
 }
+
+.left-video {
+  display: flex;
+  justify-content: left;
+}
+
+.right-video {
+  display: flex;
+  justify-content: right;
+}
