@@ -5,6 +5,7 @@ layout: layout.njk
 tags: posts
 ---
 
+<article>
 Hi!
 
 <div class="centered-video">
@@ -16,3 +17,4 @@ Hi!
 
 
 Thanks for reading!
+</article>
